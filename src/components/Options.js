@@ -1,4 +1,3 @@
-import e from 'cors'
 import React, { useContext, useState } from 'react'
 
 import {CopyToClipboard} from 'react-copy-to-clipboard'
@@ -8,6 +7,7 @@ import { SocketContext } from '../SocketContext'
 const Options = ({children}) => {
     const {me, callAccepted, name, setName, callEnded, leaveCall, callUser} = useContext(SocketContext)
     const [idToCall, setIdToCall] = useState('')
+    
     
     const handleSubmit = (e) => {
         e.preventDefault()
