@@ -1,0 +1,274 @@
+/* external CSS */
+:root {
+    --body-background-color: #7EB9C2;
+    --main-content-background-color: #F6F7FA;
+    --article-content-color: #93959F;
+    --green-color: yellowgreen;
+    --blue-color: #586CD1;
+    --sage-color: #d2cca1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Akshar', sans-serif;
+}
+
+body {
+    background: var(--body-background-color);
+}
+
+header {
+
+    display: inline-block;
+    width: 70vw;
+}
+
+header h1 {
+    margin-left: 32rem;
+    font-size: 3rem;
+    color: #72747e;
+}
+
+h1 span {
+    color: rgb(218, 22, 22);
+}
+
+main {
+    display: inline-block;
+}
+
+.caller-card {
+    display: inline-block;
+    position: relative;
+    height: 30rem;
+    width: 25rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .2));
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    border: .2rem var(--sage-color) solid;
+}
+
+.caller1 {
+    margin: 2rem 5rem 0 7.9rem;
+}
+
+video {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 9%;
+}
+
+.name-tag {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: var(--sage-color);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.caller2 {
+    margin: 2rem 5rem 0 8rem;
+}
+
+.loading-call {
+    position: absolute;
+    left: 41%;
+    top: 35%;
+}
+
+.loading-call span i {
+    animation: spin-animation 1s infinite;
+    animation-timing-function: linear;
+    font-size: 4rem;
+    color: #d2cca1;
+}
+
+.loading-call p {
+    font-size: 2rem;
+    color: #d2cca1;
+}
+
+aside {
+    display: inline-block;
+    position: absolute;
+    height: 100vh;
+    width: 19rem;
+    top: 0;
+}
+
+aside>article {
+    height: 7rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-top-left-radius: 2rem;
+}
+
+.call-info {
+    margin-top: 8rem;
+    background: #586CD1;
+}
+
+p span {
+    color: var(--sage-color);
+}
+
+.call-history {
+    background: #586CD1;
+}
+
+.call-actions {
+    background: #586CD1;
+}
+
+.call-info .description {
+    margin-top: 1.5rem;
+}
+
+.call-history .description {
+    margin-top: 1rem;
+}
+
+.call-actions .description {
+    margin-top: .4rem;
+}
+
+.input {
+    border: none;
+    border-radius: .18rem;
+    height: 1.5rem;
+    background: rgb(193, 198, 211);
+}
+
+.call {
+    margin-top: .4rem;
+    margin-left: 0;
+}
+
+
+.btn {
+    margin-left: .3rem;
+    width: 4rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: .18rem;
+    color: rgb(234, 224, 224);
+    border: .02rem rgb(234, 224, 224) solid;
+}
+.name-btn {
+    background-color: rgb(60, 60, 75);
+}
+
+.call-btn {
+    background-color: rgb(22, 164, 129);
+}
+
+.hang-up-btn {
+    background-color: rgb(188, 173, 55);
+}
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.receiving-call {
+    position: absolute;
+    left: 40%;
+    width: 10rem;
+    height: 6rem;
+    border-radius: 1rem;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .7))
+}
+
+.receiving-call h1 {
+    color: rgb(182, 198, 198);
+}
+
+.receiving-call p {
+    color: azure;
+}
+
+.receiving-call button {
+    margin-top: .4rem;
+    width: 5rem;
+    justify-content: center;
+    border-radius: .2rem;
+    border: none;
+    background-color: rgb(110, 241, 197);
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(18deg);
+    }
+    20% {
+        transform: rotate(36deg);
+    }
+    40% {
+        transform: rotate(72deg);
+    }
+    800% {
+        transform: rotate(144deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+ .guide {
+     background-color: aliceblue;
+     margin-top: 11rem;
+     height: 60vh;
+ }
+
+ .guide h1 {
+     margin-left: 3rem;
+     text-decoration: underline;
+     text-transform: capitalize;
+     font-size: 2.5rem;
+     color: var(--grey-color);
+ }
+
+ .call-guide {
+     border: .2rem var(--body-background-color) solid;
+     display: inline-block;
+     border-radius: .5rem;
+ }
+
+ .call-guide h1 {
+     margin-left: .5rem;
+     text-decoration: none;
+     font-size: 1.8rem;
+ }
+
+ .make {
+     margin-top: .3rem;
+     margin-left: 1.5rem;
+     height: 23rem;
+     width: 49%;
+ }
+
+ ol {
+     margin: 1rem 0 0 3rem;
+     display: inline-block;
+ }
+
+ ol li {
+     font-size: 1.2rem;
+     margin-bottom: 1rem;
+ }
+
+ .receive {
+     margin-left: 5rem;
+     height: 23rem;
+     width: 42%;
+ }
