@@ -1,11 +1,14 @@
 /* external CSS */
 :root {
-    --body-background-color: #7EB9C2;
+    --body-background-color: #1B263B;
     --main-content-background-color: #F6F7FA;
     --article-content-color: #93959F;
+    --scrollbar-color: #757780;
     --green-color: yellowgreen;
-    --blue-color: #586CD1;
+    --silver-color: #E0E1DD;
     --sage-color: #d2cca1;
+    --grey-color: #72747e;
+    --aside-article-color: #A0AAB2;
 }
 
 * {
@@ -35,6 +38,10 @@ h1 span {
     color: rgb(218, 22, 22);
 }
 
+.quick-navbar {
+    display: none;
+}
+
 main {
     display: inline-block;
 }
@@ -44,7 +51,7 @@ main {
     position: relative;
     height: 30rem;
     width: 25rem;
-    background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .2));
+    background: linear-gradient(to right, rgba(119, 141, 169, .7), rgba(119, 141, 169, .2));
     background-position: center;
     background-size: cover;
     border-radius: 10%;
@@ -60,6 +67,7 @@ video {
     transform: rotateY(180deg);
     height: 100%;
     width: 100%;
+    object-fit: initial;
     border-radius: 9%;
 }
 
@@ -102,36 +110,28 @@ aside {
     top: 0;
 }
 
-aside>article {
+aside > article {
     height: 7rem;
     margin-bottom: 2rem;
     text-align: center;
     border-top-left-radius: 2rem;
+    background-color: var(--aside-article-color);
 }
 
 .call-info {
     margin-top: 8rem;
-    background: #586CD1;
 }
 
 p span {
-    color: var(--sage-color);
-}
-
-.call-history {
-    background: #586CD1;
-}
-
-.call-actions {
-    background: #586CD1;
+    color: var(--blue-color);
 }
 
 .call-info .description {
-    margin-top: 1.5rem;
+    margin-top: .7rem;
 }
 
 .call-history .description {
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .call-actions .description {
@@ -183,10 +183,14 @@ footer {
     width: 10rem;
     height: 6rem;
     border-radius: 1rem;
+    border: .1rem var(--silver-color) solid;
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .7))
 }
 
 .receiving-call h1 {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: 0;
     color: rgb(182, 198, 198);
 }
 
@@ -203,29 +207,8 @@ footer {
     background-color: rgb(110, 241, 197);
 }
 
-@keyframes spin-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(18deg);
-    }
-    20% {
-        transform: rotate(36deg);
-    }
-    40% {
-        transform: rotate(72deg);
-    }
-    800% {
-        transform: rotate(144deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
  .guide {
-     background-color: aliceblue;
+     background-color: var(--silver-color);
      margin-top: 11rem;
      height: 60vh;
  }
@@ -273,35 +256,83 @@ footer {
      width: 42%;
  }
 
-@media screen and (max-width: 750px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Akshar', sans-serif;
-    }
+  ::-webkit-scrollbar {
+      width: .5rem;
+      height: 1rem;
+  }
 
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: .5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-color);
+      border-radius: .5rem;
+  }
+
+ @keyframes spin-animation {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     10% {
+         transform: rotate(18deg);
+     }
+
+     20% {
+         transform: rotate(36deg);
+     }
+
+     40% {
+         transform: rotate(72deg);
+     }
+
+     800% {
+         transform: rotate(144deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+@media screen and (max-width: 750px) {
     header {
         display: block;
-        height: 4rem;
+        height: 12rem;
     }
-
     header h1 {
         margin-left: 4.5rem;
-
     }
-
+    .quick-navbar {
+        display: block;
+    }
+    .quick-navbar {
+        display: block;
+    }
+    .name-copy {
+        margin-top: .5rem;
+    }
+    .name-paste {
+        margin-top: 1rem;
+    }
+    .quick-navbar input {
+        height: 2rem;
+        width: 15rem;
+    }
+    .btn {
+        height: 2rem;
+        width: 5rem;
+        margin-left: .3rem;
+    }
     main {
         display: block;
     }
 
     .caller-card {
-        position: relative;
-        display: inline-block;
         height: calc(100vh - 4rem);
         width: 48vw;
-        background-position: center;
-        background-size: cover;
         border-radius: 0%;
         border: none;
         border-top: .2rem var(--sage-color) solid;
@@ -318,17 +349,11 @@ footer {
         border-left: .2rem var(--sage-color) solid;
     }
     video {
-        position: absolute;
-
-        height: 100%;
-        width: 100%;
-        border-radius: 9%;
+        border-radius: 0%;
     }
     .name-tag {
-        position: absolute;
         bottom: .5rem;
         left: .5rem;
-        background-color: var(--sage-color);
         padding: .2rem;
         border-radius: .7rem;
     }
@@ -338,7 +363,7 @@ footer {
     }
 
     .guide {
-        background-color: aliceblue;
+        background-color: var(--silver-color);
         margin-top: 2rem;
         height: 122vh;
     }
