@@ -1,8 +1,8 @@
 /* external CSS */
 :root {
-    --body-background-color: #1B263B;
+    --body-background-color: #e8e9eb;
     --main-content-background-color: #F6F7FA;
-    --article-content-color: #93959F;
+    --article-content-color: #565760;
     --scrollbar-color: #757780;
     --green-color: yellowgreen;
     --silver-color: #E0E1DD;
@@ -51,7 +51,7 @@ main {
     position: relative;
     height: 30rem;
     width: 25rem;
-    background: linear-gradient(to right, rgba(119, 141, 169, .7), rgba(119, 141, 169, .2));
+    background: linear-gradient(to right, rgba(56, 56, 57, 0.7), rgba(55, 59, 63, 0.2));
     background-position: center;
     background-size: cover;
     border-radius: 10%;
@@ -254,6 +254,7 @@ footer {
      margin-left: 5rem;
      height: 23rem;
      width: 42%;
+     
  }
 
   ::-webkit-scrollbar {
